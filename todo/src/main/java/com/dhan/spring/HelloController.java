@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.dhan.service.Service1;
@@ -17,6 +18,13 @@ public class HelloController {
 	@Autowired
 	private Service1 service1;
 
+	@RequestMapping(method=RequestMethod.GET)
+	public String home() {
+		
+		return "home";
+	}
+	
+		
 	@RequestMapping(value = "add")
 	public ModelAndView add(HttpServletRequest req, HttpServletResponse res) {
 		int i = Integer.parseInt(req.getParameter("value1"));
