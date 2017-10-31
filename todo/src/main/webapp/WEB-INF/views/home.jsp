@@ -8,16 +8,23 @@
 </head>
 <body>
 
-
+	<div align="center">
 	<h1>Home Page</h1>
 	<a href="listusers">List Users</a>
 	<a href="www.google.com">Google</a>
 
 	<form action="add">
-		<input type="text" name="value1" id="value1"> <input
-			type="text" name="value2" id="value2"> <input type="submit" value="Submit">
+		<h3>Enter number 1 :</h3>
+		<input type="text" name="value1" id="value1"> <br>
+		<h3>Enter number 2 :</h3>
+		 <input	type="text" name="value2" id="value2"> <br>
+		<br>
+		 <input type="submit" value="Submit">
 	</form>
-	<h2><a href="path/map/Dhananjay/30/USA">Path Variable Link</a></h2>
-	
+	<h2>
+		<a href="path/map/Dhananjay/30/USA">Path Variable Link</a>
+	</h2>
+	<a href="userform"><h3> Take me to User Registration Form </h3></a>
+	</div>
 </body>
 </html>

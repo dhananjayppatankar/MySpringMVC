@@ -9,7 +9,7 @@
 <body>
 
 	
-	<h1>{countryuser}</h1>
+	<h1>${countryuser}</h1>
 
 
 </body>
