@@ -17,6 +17,7 @@
 		<input type="text" name="value1" id="value1"> <input
 			type="text" name="value2" id="value2"> <input type="submit" value="Submit">
 	</form>
+	<h2><a href="path/map/Dhananjay/30/USA">Path Variable Link</a></h2>
 	
 </body>
 </html>

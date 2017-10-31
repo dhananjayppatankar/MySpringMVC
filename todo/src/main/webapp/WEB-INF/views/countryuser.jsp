@@ -8,7 +8,9 @@
 </head>
 <body>
 
-	<h1>${listuser}</h1>
-	<h1>${welcome} </h1>
+	
+	<h1>{countryuser}</h1>
+
+
 </body>
 </html>
