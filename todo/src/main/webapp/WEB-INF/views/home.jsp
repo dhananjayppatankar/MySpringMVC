@@ -10,8 +10,8 @@
 
 	<div align="center">
 	<h1>Home Page</h1>
-	<a href="listusers">List Users</a>
-	<a href="www.google.com">Google</a>
+	<a href="listusers">List Users</a> <span> </span>
+	<a href="sayhello">Say Hello</a>
 
 	<form action="add">
 		<h3>Enter number 1 :</h3>

@@ -11,7 +11,8 @@
 
 	<h3>${hellomessage}</h3>
 	<h1>${result}</h1>
-
-
+	<h1>${headermessage }</h1>
+	<hr>
+	<h1>${webmessage }</h1>
 </body>
 </html>

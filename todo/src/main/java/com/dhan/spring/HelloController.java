@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,6 +25,14 @@ public class HelloController {
 		return "home";
 	}
 	
+	@RequestMapping(value="sayhello")
+	public String modelMessage(Model model) {
+		String a = "This is a header message";
+		String b = "This is a Web message";
+		model.addAttribute("headermessage", a);
+		model.addAttribute("webmessage", b);
+		return "hello";
+	}
 		
 	@RequestMapping(value = "add")
 	public ModelAndView add(HttpServletRequest req, HttpServletResponse res) {
