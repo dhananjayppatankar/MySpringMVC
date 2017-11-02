@@ -11,7 +11,12 @@
 
 	<!-- 		use c: forEach and c:out for displaying the list of users here
 			import Core jstl Tag library here						 -->
+	
+	<a href="userform">Back</a>
+	
 	<div align="center">
+	
+	
 		<h1 align="center">User Management System</h1>
 		<table border="1" bordercolor="black" cellpadding="5px" bgcolor="lightblue">
 			<caption>
@@ -35,7 +40,7 @@
 				</tr>
 			</c:forEach>
 		</table>
-
+	
 	</div>
 
 

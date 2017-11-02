@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,13 +20,13 @@ public class HelloController {
 	@Autowired
 	private Service1 service1;
 
-	@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(value="/",method=RequestMethod.GET)
 	public String home() {
 		
 		return "home";
 	}
 	
-	@RequestMapping(value="sayhello")
+	@ModelAttribute
 	public String modelMessage(Model model) {
 		String a = "This is a header message";
 		String b = "This is a Web message";

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -47,24 +48,20 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/userform")
-	public ModelAndView userForm() {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("userform");
-		return mv;
+	public String userForm() {
+// Use userform URL to show the userform page to the users.... Do not use ModelAndView here....
+		return "userform";
 	}
 	
-	@RequestMapping(value="/enter")
-	public ModelAndView userFormInput(@RequestParam("name") String name,@RequestParam("email") String email, @RequestParam("age") int age, @RequestParam("country") String country ) {
-		
+	@RequestMapping(value="/enter" ,method=RequestMethod.POST)
+	public String userFormInput(@RequestParam("name") String name,@RequestParam("email") String email, @RequestParam("age") int age, @RequestParam("country") String country ) {
 		User user = new User(name,email,age,country);
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("user", user);
-		mv.setViewName("userdisplay");
-		return mv;
+		userservice.createUser(user);
+		return "redirect:/listusers";
 		
 	}
 	
-	@RequestMapping(value="/enter1")
+	@RequestMapping(value="/enter1", method=RequestMethod.POST)
 	public ModelAndView userFormMapInput(@RequestParam Map<String,String> requestMap) {
 		User user = new User(requestMap.get("name"), requestMap.get("email"), Integer.parseInt(requestMap.get("age")),requestMap.get("country"));
 		ModelAndView mv= new ModelAndView();

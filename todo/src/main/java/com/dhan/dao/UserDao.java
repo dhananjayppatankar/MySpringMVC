@@ -25,9 +25,17 @@ public class UserDao {
 		list.add(new User("dhananjay9", "dhan9@yahoo.com", 209, "India9"));
 
 	}
-			
-	public List<User> getAllusers(){
-		
+
+	public List<User> getAllusers() {
+
 		return list;
 	}
+
+	public void addUser(User user) {
+	list.add(user);
+		
+	}
+	
+
+	
 }
