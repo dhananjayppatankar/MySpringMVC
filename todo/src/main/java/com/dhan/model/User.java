@@ -4,7 +4,7 @@ public class User {
 
 	private String name;
 	private String email;
-	private int age;
+	private Integer	 age;
 	private String country;
 
 	
@@ -14,6 +14,9 @@ public class User {
 		this.email = email;
 		this.age = age;
 		this.country = country;
+	}
+	public User() {
+		
 	}
 
 	public String getName() {
@@ -32,11 +35,11 @@ public class User {
 		this.email = email;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 

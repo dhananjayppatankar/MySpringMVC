@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="#E2E2E2">
 
 	<!-- 		use c: forEach and c:out for displaying the list of users here
 			import Core jstl Tag library here						 -->

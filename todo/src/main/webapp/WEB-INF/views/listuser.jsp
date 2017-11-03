@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body bgcolor="#E2E2E2">
 
 	<h1>${listuser}</h1>
 	<h1>${welcome} </h1>
