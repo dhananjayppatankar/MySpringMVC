@@ -6,6 +6,7 @@
  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
 	
 	<ctx:annotation-config></ctx:annotation-config>
+	<mvc:annotation-driven/>
 	
 	<ctx:component-scan base-package ="com.dhan.*"></ctx:component-scan>
 	<ctx:component-scan base-package ="com.dhan.spring"></ctx:component-scan>
@@ -19,5 +20,12 @@
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
+	</bean>
+	
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	<property name="basename" value="/WEB-INF/messages">
+	
+	</property>
 	</bean>
 </beans>

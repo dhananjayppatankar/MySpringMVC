@@ -1,10 +1,32 @@
 package com.dhan.model;
 
-public class User {
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
+public class User {
+	
+	@SuppressWarnings("deprecation")
+	@NotEmpty
+	@Pattern(regexp="[^0-9]+")
+	@Size(min=5,max=10)
 	private String name;
+	
+	@NotEmpty
+	@Email
 	private String email;
+	
+	@NotNull
+	@Min(value = 12)
+	@Max(value = 120)
 	private Integer	 age;
+	
+	@NotEmpty
 	private String country;
 
 	
@@ -51,45 +73,7 @@ public class User {
 		this.country = country;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + age;
-		result = prime * result + ((country == null) ? 0 : country.hashCode());
-		result = prime * result + ((email == null) ? 0 : email.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		User other = (User) obj;
-		if (age != other.age)
-			return false;
-		if (country == null) {
-			if (other.country != null)
-				return false;
-		} else if (!country.equals(other.country))
-			return false;
-		if (email == null) {
-			if (other.email != null)
-				return false;
-		} else if (!email.equals(other.email))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		return true;
-	}
+	
 	
 
 

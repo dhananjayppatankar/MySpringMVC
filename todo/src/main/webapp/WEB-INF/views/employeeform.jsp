@@ -10,27 +10,24 @@
 
 <a href="/todo">Home</a>
 	<div align="center">
-	<h1 align="center"> User Registration Form </h1>
-	<form action="enter" method="post">
+	<h1 align="center"> Employee Registration Form </h1>
+	<form action="eployeeSuccess" method="post">
 		<table>
 			<tr>
-				<td>Username :</td>
-				<td><input type="text" name="name" /></td>
+				<td>Employee Name :</td>
+				<td><input type="text" name="ename" /></td>
 			</tr>
 
 			<tr>
-				<td>Email :</td>
-				<td><input type="text" name="email" /></td>
+				<td>Address :</td>
+				<td><input type="text" name="address" /></td>
 			</tr>
 
 			<tr>
-				<td>Age :</td>
-				<td><input type="text" name="age" /></td>
+				<td>Salary :</td>
+				<td><input type="text" name="salary" /></td>
 			</tr>
-			<tr>
-				<td>Country :</td>
-				<td><input type="text" name="country" /></td>
-			</tr>
+			
 			
 			<tr>
 				<td>Date :</td>

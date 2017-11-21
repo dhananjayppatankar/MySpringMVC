@@ -3,9 +3,12 @@ package com.dhan.spring;
 import java.util.List;
 import java.util.Map;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -67,22 +70,25 @@ public class UserController {
 
 	}
 
-	@RequestMapping(value="/enter1", method=RequestMethod.POST)
-	public ModelAndView userFormMapInput(@RequestParam Map<String,String> requestMap) {
-		User user = new User(requestMap.get("name"), requestMap.get("email"), Integer.parseInt(requestMap.get("age")),requestMap.get("country"));
-		ModelAndView mv= new ModelAndView();
+	@RequestMapping(value = "/enter1", method = RequestMethod.POST)
+	public ModelAndView userFormMapInput(@RequestParam Map<String, String> requestMap) {
+		User user = new User(requestMap.get("name"), requestMap.get("email"), Integer.parseInt(requestMap.get("age")),
+				requestMap.get("country"));
+		ModelAndView mv = new ModelAndView();
 		mv.addObject(user);
 		mv.setViewName("userdisplay");
 		return mv;
+
+	}
+
+	@RequestMapping(value = "/usermodel", method = RequestMethod.POST)
+	public String usermodel(@Valid @ModelAttribute("user") User user, BindingResult result) {
+		if (result.hasErrors()) {
+			return "userformSpring";
+		} 
+			userservice.createUser(user);
+			return "redirect:/listusers";
 		
 	}
 
-	@RequestMapping(value="/usermodel", method=RequestMethod.POST)
-	public String usermodel(@ModelAttribute("user") User user) {
-		userservice.createUser(user);
-		return "redirect:/listusers";
-	}
-	
-	
-	
 }

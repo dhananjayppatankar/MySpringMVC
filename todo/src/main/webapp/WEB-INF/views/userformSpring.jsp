@@ -16,18 +16,22 @@
 				<tr>
 					<td>Username :</td>
 					<td><f:input path="name"/></td>
+					<td><f:errors path="name"/></td>
 				</tr>
 				<tr>
 					<td>Email :</td>
 					<td><f:input path="email"/></td>
+					<td><f:errors path="email"/></td>
 				</tr>
 				<tr>
 					<td>Age :</td>
 					<td><f:input path="age"/></td>
+					<td><f:errors path="age"/></td>
 				</tr>
 				<tr>
 					<td>Country :</td>
 					<td><f:input path="country"/></td>
+					<td><f:errors path="country"/></td>
 				</tr>
 				<tr>
 				

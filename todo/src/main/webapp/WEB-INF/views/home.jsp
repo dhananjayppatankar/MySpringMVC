@@ -25,6 +25,8 @@
 		<a href="path/map/Dhananjay/30/USA">Path Variable Link</a>
 	</h2>
 	<a href="userform"><h3> Take me to User Registration Form </h3></a>
+	<br>
+	<a href="employeeform"><h3> Take me to Employee Registration Form with WebDataBinder Example </h3></a>
 	</div>
 </body>
 </html>
