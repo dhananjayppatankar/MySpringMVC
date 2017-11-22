@@ -2,17 +2,11 @@ package com.dhan.model;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
-@Entity
 public class Employee {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	
+	//private int id;
 
 	private String ename;
 	private String address;
@@ -23,9 +17,9 @@ public class Employee {
 
 	}
 
-	public Employee(int id, String ename, String address, int salary, Date date) {
+	public Employee( String ename, String address, int salary, Date date) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.ename = ename;
 		this.address = address;
 		this.salary = salary;
@@ -34,7 +28,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", ename=" + ename + ", address=" + address + ", salary=" + salary + ", date="
+		return "Employee [ename=" + ename + ", address=" + address + ", salary=" + salary + ", date="
 				+ date + "]";
 	}
 
@@ -46,13 +40,13 @@ public class Employee {
 		this.date = date;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
+//	public int getId() {
+//		return id;
+//	}
+//
+//	public void setId(int id) {
+//		this.id = id;
+//	}
 
 	public String getEname() {
 		return ename;

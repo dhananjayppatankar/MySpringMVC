@@ -11,7 +11,7 @@
 <a href="/todo">Home</a>
 	<div align="center">
 	<h1 align="center"> Employee Registration Form </h1>
-	<form action="eployeeSuccess" method="post">
+	<form action="employeeSuccess" method="post">
 		<table>
 			<tr>
 				<td>Employee Name :</td>
